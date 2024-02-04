@@ -3,7 +3,7 @@ from pathlib import Path
 import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-project_name = 'kidney disease Classifier'
+project_name = 'cnnClassifier'
 
 list_of_files = [
     ".github/workflows/.gitkeep",
