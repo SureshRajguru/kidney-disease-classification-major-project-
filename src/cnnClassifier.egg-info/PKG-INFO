@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/SureshRajguru/kidney-disease-classification-major-project-
+Author: SureshRajguru
+Author-email: rajgurua67@gmail.com
+Project-URL: Bug Tracker, https://github.com/SureshRajguru/kidney-disease-classification-major-project-/issues
+
+# kidney-disease-classification-major-project-
+Introduction Welcome to the Kidney Disease Classification project! This project aims to develop a deep learning model for the classification of kidney diseases using CT scans. The model can categorize CT images into different classes such as Normal, Cyst, Tumor, and Stone.
+
+Workflows
+Update config.yaml
+Update secrets.yaml [Optional]
+Update params.yaml
+Update the entity
+Update the configuration manager in src config
+Update the components
+Update the pipeline
+Update the main.py
+Update the dvc.yaml
+app.py
+
+# How to run?
+### steps
+
+Clone the repository
+
+
+
+
