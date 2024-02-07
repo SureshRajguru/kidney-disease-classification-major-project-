@@ -84,3 +84,193 @@ requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionAborted
 [2024-02-07 11:28:58,678: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2024-02-07 12:09:15,289: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 12:09:15,293: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 12:09:15,296: INFO: common: created directory at: artifacts]
+[2024-02-07 12:09:15,297: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-07 12:15:57,519: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-07 13:25:44,002: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-07 13:25:44,015: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 13:25:44,020: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 13:25:44,020: INFO: common: created directory at: artifacts]
+[2024-02-07 13:25:44,023: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-07 13:25:44,025: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1bnQUYMn2XW2246xbOOrQsps11zJzI68Y/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-07 14:26:45,141: ERROR: main: ('Connection broken: IncompleteRead(654311424 bytes read, 285752434 more expected)', IncompleteRead(654311424 bytes read, 285752434 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 737, in _error_catcher
+    yield
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 873, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(654311424 bytes read, 285752434 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 1033, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 925, in read
+    data = self._raw_read(amt)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 881, in _raw_read
+    self._fp.close()
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 754, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(654311424 bytes read, 285752434 more expected)', IncompleteRead(654311424 bytes read, 285752434 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\rajgu\Desktop\major project feb\kidney-disease-classification-major-project-\main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 33, in download_file
+    raise e
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\gdown\download.py", line 344, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(654311424 bytes read, 285752434 more expected)', IncompleteRead(654311424 bytes read, 285752434 more expected))
+[2024-02-07 16:02:07,401: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-07 16:02:07,401: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 16:02:07,411: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 16:02:07,412: INFO: common: created directory at: artifacts]
+[2024-02-07 16:02:07,414: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-07 16:02:07,414: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1bnQUYMn2XW2246xbOOrQsps11zJzI68Y/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-07 16:03:59,923: ERROR: main: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))]
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 737, in _error_catcher
+    yield
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 852, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 835, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\http\client.py", line 459, in read
+    n = self.readinto(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\http\client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 1033, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 925, in read
+    data = self._raw_read(amt)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 881, in _raw_read
+    self._fp.close()
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 754, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\rajgu\Desktop\major project feb\kidney-disease-classification-major-project-\main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 33, in download_file
+    raise e
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\gdown\download.py", line 344, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+[2024-02-07 16:09:48,115: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-07 16:09:48,125: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 16:09:48,127: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 16:09:48,127: INFO: common: created directory at: artifacts]
+[2024-02-07 16:09:48,130: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-07 16:09:48,131: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1bnQUYMn2XW2246xbOOrQsps11zJzI68Y/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-07 16:25:44,104: ERROR: main: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))]
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 737, in _error_catcher
+    yield
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 852, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 835, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\http\client.py", line 459, in read
+    n = self.readinto(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\http\client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 1033, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 925, in read
+    data = self._raw_read(amt)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 881, in _raw_read
+    self._fp.close()
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\urllib3\response.py", line 754, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\rajgu\Desktop\major project feb\kidney-disease-classification-major-project-\main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 33, in download_file
+    raise e
+  File "c:\users\rajgu\desktop\major project feb\kidney-disease-classification-major-project-\src\cnnClassifier\components\data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\gdown\download.py", line 344, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\rajgu\anaconda3\envs\kidneyproject\lib\site-packages\requests\models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None)", ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+[2024-02-07 16:26:32,982: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-07 16:26:32,987: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 16:26:32,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 16:26:32,987: INFO: common: created directory at: artifacts]
+[2024-02-07 16:26:32,991: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-07 16:26:32,991: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1bnQUYMn2XW2246xbOOrQsps11zJzI68Y/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-07 16:42:20,074: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1bnQUYMn2XW2246xbOOrQsps11zJzI68Y/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-02-07 16:42:34,355: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-02-07 16:42:34,355: INFO: main: *******************]
+[2024-02-07 16:42:34,355: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-02-07 16:42:34,358: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 16:42:34,358: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 16:42:34,358: INFO: common: created directory at: artifacts]
+[2024-02-07 16:42:34,364: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-07 16:42:35,155: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-02-07 16:42:35,532: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
